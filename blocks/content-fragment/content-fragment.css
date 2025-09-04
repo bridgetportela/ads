@@ -1,7 +1,7 @@
 
 
 .content-fragment-container .content-fragment-wrapper {
-  width: 80%;
+  width: 85%;
   max-width: 1220px;
   margin: 10px auto;
   display: block;
@@ -32,8 +32,6 @@
   background-size: cover;
   background-position: center;
   margin: auto;
-  padding-left: 100px;
-  padding-right: 100px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: #fff;
@@ -93,7 +91,7 @@
   display: inline-block;
   padding: .9375rem 1.125rem;
   background-color: #161d26;
-  color: var(--text-light);
+  color: #fff;
   text-decoration: none;
   outline: none;
   border: none;
