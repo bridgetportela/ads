@@ -104,6 +104,10 @@
   text-align: left;
   cursor: pointer;
 }
+
+.content-fragment-wrapper .content-fragment .banner-content .banner-detail .button-container .secondary a {
+    background-color: #f55600;
+}
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail a::after {
   font-family: 'Font Awesome 5 Solid';
   content: "\f105";
