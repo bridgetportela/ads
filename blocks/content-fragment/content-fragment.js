@@ -140,7 +140,7 @@ export default async function decorate(block) {
 
 				let mainButton = '';
 				let secButton = '';
-/*
+			
 				if (cfReq.urlmain !== null) {
 					mainButton = '<p class="button-container primary">'
 				 								+	'<strong><a href="${cfReq?.urlmain ? cfReq.urlmain : \'#\'}" contenteditable="true" title="${cfReq?.ctalabelmain}" class="button">${cfReq?.ctalabelmain}</a></strong>'
@@ -152,7 +152,7 @@ export default async function decorate(block) {
 				 								+	'<strong><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : \'#\'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button">${cfReq?.ctalabelsecondary}</a></strong>'
 					 						+	'</p>';
 				}
-*/
+
         block.innerHTML = "<div class=\"banner-content block ${displayStyle}\" data-aue-resource=${itemId} data-aue-label=\"Offer Content fragment\" data-aue-type=\"reference\" data-aue-filter=\"contentfragment\" style=\"${bannerContentStyle}\">"
          + "<div class=\"banner-detail\" style=\"${bannerDetailStyle}\" data-aue-prop=\"bannerimage\" data-aue-label=\"Main Image\" data-aue-type=\"media\" >"
              +  "<p data-aue-prop=\"title\" data-aue-label=\"Title\" data-aue-type=\"text\" class='cftitle'>${cfReq?.title}</p>"
