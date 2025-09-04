@@ -107,6 +107,11 @@
   line-height: 24px;
 }
 
+.content-fragment-wrapper .content-fragment .banner-content .stat-container p {
+    display: inline-block;
+    text-align: left;
+}
+
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail a {
   display: inline-block;
   padding: .9375rem 1.125rem;
