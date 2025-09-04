@@ -155,6 +155,7 @@ export default async function decorate(block) {
 								</span>
             </div>
             <div class='banner-logo'>
+							<img src="${imgUrl}" data-aue-prop="image" data-aue-label="Image" data-aue-type="media">
             </div>
         </div>`;
         
