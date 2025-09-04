@@ -138,8 +138,8 @@ export default async function decorate(block) {
         }
 				*/
 
-				let mainButton = null;
-				let secButton = null;
+				let mainButton = '';
+				let secButton = '';
 
 				if (cfReq.urlmain !== null) {
 					mainButton = '<p class="button-container primary">'
