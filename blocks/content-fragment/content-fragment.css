@@ -105,7 +105,7 @@
   cursor: pointer;
 }
 
-.content-fragment-wrapper .content-fragment .banner-content .banner-detail .button-container .secondary a {
+.content-fragment-wrapper .content-fragment .banner-content .banner-detail .secondary a {
     background-color: #f55600;
 }
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail a::after {
