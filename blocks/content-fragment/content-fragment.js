@@ -146,7 +146,7 @@ export default async function decorate(block) {
                 <p data-aue-prop="cfdescription" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'>${cfReq?.description?.plaintext}</p>
 								<div class="button-group">
 									<p class="button-container">
-				 						<em><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button secondary">${cfReq?.ctalabelsecondary}</a></em>
+				 						<strong><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button secondary">${cfReq?.ctalabelsecondary}</a></strong>
 					 				</p>
 									<p class="button-container primary">
 				 						<strong><a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" contenteditable="true" title="${cfReq?.ctalabelmain}" class="button primary">${cfReq?.ctalabelmain}</a></strong>
