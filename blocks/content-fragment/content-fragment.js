@@ -11,7 +11,7 @@ export default async function decorate(block) {
   const CONFIG = {
     WRAPPER_SERVICE_URL: 'https://prod-31.westus.logic.azure.com:443/workflows/2660b7afa9524acbae379074ae38501e/triggers/manual/paths/invoke',
     WRAPPER_SERVICE_PARAMS: 'api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=kfcQD5S7ovej9RHdGZFVfgvA-eEqNlb6r_ukuByZ64o',
-    GRAPHQL_QUERY: '/graphql/execute.json/wknd-universal/CTAByPath',
+    GRAPHQL_QUERY: '/graphql/execute.json/wknd-universal/AdsByPath',
     EXCLUDED_THEME_KEYS: new Set(['brandSite', 'brandLogo'])
   };
 	
@@ -22,7 +22,7 @@ export default async function decorate(block) {
 	
 	//const aempublishurl = getMetadata('publishurl') || '';
 	
-  const persistedquery = '/graphql/execute.json/wknd-universal/CTAByPath';
+  const persistedquery = '/graphql/execute.json/wknd-universal/AdsByPath';
 
 	//const properties = readBlockConfig(block);
  
@@ -141,16 +141,18 @@ export default async function decorate(block) {
                 <p data-aue-prop="cfsubtitle" data-aue-label="SubTitle" data-aue-type="text" class='cfsubtitle'>${cfReq?.subtitle}</p>
                 
                 <p data-aue-prop="cfdescription" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'>${cfReq?.description?.plaintext}</p>
-                <a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page">
-                  <span data-aue-prop="ctalabelmain" data-aue-label="Button Label" data-aue-type="text">
-                    ${cfReq?.ctalabelmain}
-                  </span>
-                </a>
-								<a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page">
-                  <span data-aue-prop="ctalabelsecondary" data-aue-label="Button Label" data-aue-type="text">
-                    ${cfReq?.ctalabelsecondary}
-                  </span>
-                </a>
+								<span>
+	                <a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page">
+	                  <p data-aue-prop="ctalabelmain" data-aue-label="Button Label" data-aue-type="text">
+	                    ${cfReq?.ctalabelmain}
+	                  </p>
+	                </a>
+									<a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page">
+	                  <p data-aue-prop="ctalabelsecondary" data-aue-label="Button Label" data-aue-type="text">
+	                    ${cfReq?.ctalabelsecondary}
+	                  </p>
+	                </a>
+								</span>
             </div>
             <div class='banner-logo'>
             </div>
