@@ -192,7 +192,7 @@ export default async function decorate(block) {
 						</div>
 						<div class='stat-container'>
 							<p data-aue-prop="statpercentage" data-aue-label="Stat Percentage" data-aue-type="text" class='statpercentage'>${cfReq?.statisticPercentage}</p>
-              <p data-aue-prop="statistic" data-aue-label="Statistic" data-aue-type="text" class='statistic'>${cfReq?.statistic}</p>
+              <p data-aue-prop="statistic" data-aue-label="Statistic" data-aue-type="text" class='statistic'>${cfReq?.statistic?.markdown}</p>
 			 			</div>	
         </div>`;
         
