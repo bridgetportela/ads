@@ -190,7 +190,7 @@ export default async function decorate(block) {
 								<img src="${imgUrl}" data-aue-prop="image" data-aue-label="Image" data-aue-type="media">
 	            </div>
 						</div>
-						<div class='spacer'/>
+						<div class='spacer'></div>
 						<div class='stat-container'>
 							<p data-aue-prop="statpercentage" data-aue-label="Stat Percentage" data-aue-type="text" class='statpercentage'>${cfReq?.statisticPercentage}</p>
               <p data-aue-prop="statistic" data-aue-label="Statistic" data-aue-type="text" class='statistic'>${cfReq?.statistic?.markdown}</p>
