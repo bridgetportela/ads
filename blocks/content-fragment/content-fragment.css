@@ -24,6 +24,7 @@
 }
 
 .content-fragment-wrapper .content-fragment .stat-container {
+    display: inline-flex;
     background-color: #9178f7;
     border-radius: 8px;
     padding: 24px;
@@ -109,6 +110,7 @@
 
 .content-fragment-wrapper .content-fragment .banner-content .stat-container p {
     display: inline-block;
+    padding-left: 10px;
     text-align: left;
 }
 
