@@ -124,7 +124,7 @@
 .content-fragment-wrapper .content-fragment .banner-wrapper .stat-container .statpercentage {
     font-size: 3rem;
     line-height: 3rem;
-    text-alighn: end;
+    margin: auto;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail a {
