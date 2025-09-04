@@ -143,14 +143,16 @@ export default async function decorate(block) {
                 <p data-aue-prop="cfsubtitle" data-aue-label="SubTitle" data-aue-type="text" class='cfsubtitle'>${cfReq?.subtitle}</p>
                 
                 <p data-aue-prop="cfdescription" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'>${cfReq?.description?.plaintext}</p>
-								<div class="button-group">
-									<p class="button-container primary">
+								<div class="button-group">`
+				+
+									`<p class="button-container primary">
 				 						<strong><a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" contenteditable="true" title="${cfReq?.ctalabelmain}" class="button">${cfReq?.ctalabelmain}</a></strong>
-					 				</p>
-									<p class="button-container secondary">
+					 				</p>`
+					+
+									`<p class="button-container secondary">
 				 						<strong><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button">${cfReq?.ctalabelsecondary}</a></strong>
 					 				</p>
-								</div>
+								</div>`
 				<!--				
 				        <span>
 	                <a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference" class="button primary" target="_blank" rel="noopener" data-aue-filter="page">
@@ -165,7 +167,8 @@ export default async function decorate(block) {
 	                </a>
 								</span>
 				-->
-            </div>
+			+
+            `</div>
             <div class='banner-logo'>
 							<img src="${imgUrl}" data-aue-prop="image" data-aue-label="Image" data-aue-type="media">
             </div>
