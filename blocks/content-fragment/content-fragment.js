@@ -169,6 +169,9 @@ export default async function decorate(block) {
 /* working code with no dynamic elements */
 			block.innerHTML = `<div class='banner-content block ${displayStyle}' data-aue-resource=${itemId} data-aue-label="Offer Content fragment" data-aue-type="reference" data-aue-filter="contentfragment" style="${bannerContentStyle}">
           <div class='banner-detail' style="${bannerDetailStyle}" data-aue-prop="bannerimage" data-aue-label="Main Image" data-aue-type="media" >
+								<div class=graphic-container">
+									<img src="${graphicUrl}" data-aue-prop="image" data-aue-label="Image" data-aue-type="media">
+								</div>
                 <p data-aue-prop="title" data-aue-label="Title" data-aue-type="text" class='cftitle'>${cfReq?.title}</p>
                 <p data-aue-prop="cfsubtitle" data-aue-label="SubTitle" data-aue-type="text" class='cfsubtitle'>${cfReq?.subtitle}</p>
                 
