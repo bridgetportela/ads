@@ -107,7 +107,7 @@
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail a::after {
   font-family: 'Font Awesome 5 Solid';
   content: "\f105";
-  color: var(--text-light);
+  color: #fff;
   font-size: 16px;
   font-weight: 100;
   width: 15px;
@@ -280,14 +280,14 @@
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail a {
   text-align: left;
   align-self: flex-start;
-  color: #333;
+  color: #fff;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content.image-left .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-right .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-top .banner-detail a::after,
 .content-fragment-wrapper .content-fragment .banner-content.image-bottom .banner-detail a::after {
-  color: #333;
+  color: #fff;
 }
 
 /* Override text alignment for top/bottom layouts */
