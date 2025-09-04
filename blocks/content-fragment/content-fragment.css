@@ -52,6 +52,14 @@
   margin: 10px 10px 0 0;
 }
 
+.content-fragment-wrapper .content-fragment .banner-content .banner-detail .graphic-container {
+    text-align: start;
+}
+
+.content-fragment-wrapper .content-fragment .banner-content .banner-detail .graphic-container img {
+    height: 96px;
+}
+
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail .button-group {
     order: 2;
     display: flex;
