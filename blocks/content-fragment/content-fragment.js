@@ -163,8 +163,8 @@ export default async function decorate(block) {
             </div>
         </div>");
 
-			blocks.innerHTML = elements.join(" ");
-			*/
+			blocks.innerHTML = elements.join(" "); */
+	
 			
 /* working code with no dynamic elements */
 			block.innerHTML = `<div class='banner-wrapper'>
