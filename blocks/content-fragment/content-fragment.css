@@ -30,6 +30,10 @@
     width: 100%;
 }
 
+.content-fragment-wrapper .content-fragment .spacer {
+    height: 20px;
+}
+
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail {
   box-sizing: border-box;
   width: 100%;
