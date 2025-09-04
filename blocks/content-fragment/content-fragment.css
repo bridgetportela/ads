@@ -108,20 +108,20 @@
   line-height: 24px;
 }
 
-.content-fragment-wrapper .content-fragment .banner-content .stat-container p {
+.content-fragment-wrapper .content-fragment .banner-wrapper .stat-container p {
     display: inline-block;
     text-align: left;
     color: #161d26;
     font-weight: 700;
 }
 
-.content-fragment-wrapper .content-fragment .banner-content .stat-container .statistic {
+.content-fragment-wrapper .content-fragment .banner-wrapper .stat-container .statistic {
     padding-left: 20px;
     font-size: 1.25rem;
     line-height: 1.625rem;
 }
 
-.content-fragment-wrapper .content-fragment .banner-content .stat-container .statpercentage {
+.content-fragment-wrapper .content-fragment .banner-wrapper .stat-container .statpercentage {
     font-size: 3rem;
     line-height: 3rem;
     text-alighn: end;
