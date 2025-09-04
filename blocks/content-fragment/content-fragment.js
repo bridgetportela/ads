@@ -92,7 +92,7 @@ export default async function decorate(block) {
           return;
         }
 
-        const cfReq = offer?.data?.adsProductByPath?.item;
+        const cfReq = offer?.data?.adsProductsByPath?.item;
 
         if (!cfReq) {
           console.error('Error parsing response from GraphQL request - no valid data found', {
