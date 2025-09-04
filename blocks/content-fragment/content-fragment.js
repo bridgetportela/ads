@@ -138,16 +138,16 @@ export default async function decorate(block) {
         }
 				*/
 
-				const mainButton = '';
-				const secButton = '';
+				let mainButton = null;
+				let secButton = null;
 
-				if (cfReq.urlmain) {
+				if (cfReq.urlmain !== null) {
 					mainButton = '<p class="button-container primary">'
 				 								+	'<strong><a href="${cfReq?.urlmain ? cfReq.urlmain : \'#\'}" contenteditable="true" title="${cfReq?.ctalabelmain}" class="button">${cfReq?.ctalabelmain}</a></strong>'
 					 						+	'</p>';
 				}
 
-				if (cfReq.urlsecondary) {
+				if (cfReq.urlsecondary !== null) {
 					secButton = '<p class="button-container secondary">'
 				 								+	'<strong><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : \'#\'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button">${cfReq?.ctalabelsecondary}</a></strong>'
 					 						+	'</p>';
