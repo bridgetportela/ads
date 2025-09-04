@@ -106,7 +106,7 @@ export default async function decorate(block) {
         // Set up block attributes
         const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
         block.setAttribute('data-aue-type', 'container');
-        const imgUrl = isAuthor ? cfReq.bannerimage?._authorUrl : cfReq.bannerimage?._publishUrl;
+        const imgUrl = isAuthor ? cfReq.graphic?._authorUrl : cfReq.graphic?._publishUrl;
 
         // Determine the layout style
         const isImageLeft = displayStyle === 'image-left';
