@@ -1,12 +1,12 @@
 
 
 .content-fragment-container .content-fragment-wrapper {
-  width: 100%;
-  max-width: initial;
-  margin: 0 auto;
+  width: 80%;
+  max-width: 1220px;
+  margin: 10px auto;
   display: block;
   height: auto;
-  border: 2px solid #333;
+  border: 2px solid #999;
   border-radius: 8px;
 }
 
@@ -45,7 +45,16 @@
 }
 
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail p {
-  margin: 10px 0;
+  margin: 10px 10px 0 0;
+}
+
+.content-fragment-wrapper .content-fragment .banner-content .banner-detail .banner-logo {
+    width:50%;
+}
+
+.content-fragment-wrapper .content-fragment .banner-content .banner-detail .button-group {
+    order: 2;
+    display: flex;
 }
 
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cfsubtitle {
@@ -58,8 +67,8 @@
 
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cftitle {
   margin: 0;
-  font-size: 30px;
-  line-height: 50px;
+  font-size: 3rem;
+  line-height: 3rem;
   font-family: var(--black-font-family);
 }
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail .cftitle::after {
@@ -82,17 +91,17 @@
 
 .content-fragment-wrapper .content-fragment .banner-content .banner-detail a {
   display: inline-block;
-  padding: 0;
-  background-color: transparent;
+  padding: .9375rem 1.125rem;
+  background-color: #161d26;
   color: var(--text-light);
   text-decoration: none;
   outline: none;
   border: none;
-  border-radius: 0;
-  font-size: 16px;
+  border-radius: .375rem;
+  font-size: 1.16625rem;
   font-family: var(--heading-font-family);
-  line-height: 20px;
-  font-weight: 500;
+  line-height: 100%;
+  font-weight: 700;
   text-align: left;
   cursor: pointer;
 }
