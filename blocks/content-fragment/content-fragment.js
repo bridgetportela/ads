@@ -106,7 +106,8 @@ export default async function decorate(block) {
         // Set up block attributes
         const itemId = `urn:aemconnection:${contentPath}/jcr:content/data/${variationname}`;
         block.setAttribute('data-aue-type', 'container');
-        const imgUrl = isAuthor ? cfReq.graphic?._authorUrl : cfReq.graphic?._publishUrl;
+        const imgUrl = isAuthor ? cfReq.mainImage?._authorUrl : cfReq.mainImage?._publishUrl;
+				const graphicUrl = isAuthor ? cfReq.graphic?._authorUrl : cfReq.graphic?._publishUrl;
 
         // Determine the layout style
         const isImageLeft = displayStyle === 'image-left';
@@ -117,7 +118,8 @@ export default async function decorate(block) {
         // Set background image and styles based on layout
         let bannerContentStyle = '';
         let bannerDetailStyle = '';
-        
+
+			/*
         if (isImageLeft) {
           // Image-left layout: image on left, text on right
           bannerContentStyle = 'background-image: url('+imgUrl+');';
@@ -134,6 +136,7 @@ export default async function decorate(block) {
           // Default layout: image as background with gradient overlay (original behavior)
           bannerDetailStyle = 'background-image: linear-gradient(90deg,rgba(0,0,0,0.6), rgba(0,0,0,0.1) 80%) ,url('+imgUrl+');';
         }
+				*/
 
         block.innerHTML = `<div class='banner-content block ${displayStyle}' data-aue-resource=${itemId} data-aue-label="Offer Content fragment" data-aue-type="reference" data-aue-filter="contentfragment" style="${bannerContentStyle}">
           <div class='banner-detail' style="${bannerDetailStyle}" data-aue-prop="bannerimage" data-aue-label="Main Image" data-aue-type="media" >
@@ -141,18 +144,28 @@ export default async function decorate(block) {
                 <p data-aue-prop="cfsubtitle" data-aue-label="SubTitle" data-aue-type="text" class='cfsubtitle'>${cfReq?.subtitle}</p>
                 
                 <p data-aue-prop="cfdescription" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'>${cfReq?.description?.plaintext}</p>
-								<span>
-	                <a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page">
+								<div class="button-group">
+									<p class="button-container">
+				 						<em><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button secondary">${cfReq?.ctalabelsecondary}</a></em>
+					 				</p>
+									<p class="button-container primary">
+				 						<strong><a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" contenteditable="true" title="${cfReq?.ctalabelmain}" class="button primary">${cfReq?.ctalabelmain}</a></strong>
+					 				</p>
+								</div>
+				<!--				
+				        <span>
+	                <a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference" class="button primary" target="_blank" rel="noopener" data-aue-filter="page">
 	                  <p data-aue-prop="ctalabelmain" data-aue-label="Button Label" data-aue-type="text">
 	                    ${cfReq?.ctalabelmain}
 	                  </p>
 	                </a>
-									<a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference"  target="_blank" rel="noopener" data-aue-filter="page">
+									<a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" data-aue-prop="ctaUrl" data-aue-label="Button Link/URL" data-aue-type="reference" class="button secondary" target="_blank" rel="noopener" data-aue-filter="page">
 	                  <p data-aue-prop="ctalabelsecondary" data-aue-label="Button Label" data-aue-type="text">
 	                    ${cfReq?.ctalabelsecondary}
 	                  </p>
 	                </a>
 								</span>
+				-->
             </div>
             <div class='banner-logo'>
 							<img src="${imgUrl}" data-aue-prop="image" data-aue-label="Image" data-aue-type="media">
