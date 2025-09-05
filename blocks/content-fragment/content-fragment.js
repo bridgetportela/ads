@@ -152,15 +152,11 @@ export default async function decorate(block) {
 								<div class='button-group'>");
 				*/
 				if (cfRef?.urlmain) {
-					elements.append("<p class='button-container primary'>
-				 						<strong><a href='${cfReq?.urlmain ? cfReq.urlmain : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelmain}' class='button'>${cfReq?.ctalabelmain}</a></strong>
-					 				</p>");
+					elements.append("<p class='button-container primary'><strong><a href='${cfReq?.urlmain ? cfReq.urlmain : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelmain}' class='button'>${cfReq?.ctalabelmain}</a></strong></p>");
 				}
 
 				if (cfRef?.urlsecondary) {
-					elements.append("<p class='button-container secondary'>
-				 						<strong><a href='${cfReq?.urlsecondary ? cfReq.urlsecondary : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelsecondary}' class='button'>${cfReq?.ctalabelsecondary}</a></strong>
-					 				</p>");
+					elements.append("<p class='button-container secondary'><strong><a href='${cfReq?.urlsecondary ? cfReq.urlsecondary : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelsecondary}' class='button'>${cfReq?.ctalabelsecondary}</a></strong></p>");
 				}
 			/*
 			
