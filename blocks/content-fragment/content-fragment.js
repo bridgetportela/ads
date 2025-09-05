@@ -139,7 +139,7 @@ export default async function decorate(block) {
 				*/
 
 			/* Dynamic Elements code */
-				const elements = new Array();
+				const elements = new Array(2);
 
 			/*
 			
