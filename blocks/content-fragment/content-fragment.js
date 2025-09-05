@@ -151,7 +151,7 @@ export default async function decorate(block) {
                 <p data-aue-prop='cfdescription' data-aue-label='Description' data-aue-type='richtext' class='cfdescription'>${cfReq?.description?.plaintext}</p>
 								<div class='button-group'>");
 				*/
-				if (cfRef?.ctalabelmain !== 0) {
+				if (cfRef.ctalabelmain !== 0) {
 					elements.append("<p class='button-container primary'><strong><a href='${cfReq?.urlmain ? cfReq.urlmain : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelmain}' class='button'>${cfReq?.ctalabelmain}</a></strong></p>");
 				}
 
