@@ -138,8 +138,10 @@ export default async function decorate(block) {
         }
 				*/
 
-			/* Dynamic Elements code 
-				const elements = [];
+			/* Dynamic Elements code */
+				const elements = new Array();
+
+			/*
 			
 			  elements.append("<div class='banner-content block ${displayStyle}' data-aue-resource=${itemId} data-aue-label='Offer Content fragment' data-aue-type='reference' data-aue-filter='contentfragment' style='${bannerContentStyle}'>
           <div class='banner-detail' style='${bannerDetailStyle}' data-aue-prop='bannerimage' data-aue-label='Main Image' data-aue-type='media' >
@@ -148,14 +150,19 @@ export default async function decorate(block) {
                 
                 <p data-aue-prop='cfdescription' data-aue-label='Description' data-aue-type='richtext' class='cfdescription'>${cfReq?.description?.plaintext}</p>
 								<div class='button-group'>");
-				
-				elements.append("<p class='button-container primary'>
+				*/
+				if (cfRef?.urlmain) {
+					elements.append("<p class='button-container primary'>
 				 						<strong><a href='${cfReq?.urlmain ? cfReq.urlmain : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelmain}' class='button'>${cfReq?.ctalabelmain}</a></strong>
 					 				</p>");
-				
-				elements.append("<p class='button-container secondary'>
+				}
+
+				if (cfRef?.urlsecondary) {
+					elements.append("<p class='button-container secondary'>
 				 						<strong><a href='${cfReq?.urlsecondary ? cfReq.urlsecondary : \"#\"}' contenteditable='true' title='${cfReq?.ctalabelsecondary}' class='button'>${cfReq?.ctalabelsecondary}</a></strong>
 					 				</p>");
+				}
+			/*
 			
         elements.append("</div></div>
             <div class='banner-logo'>
@@ -177,14 +184,16 @@ export default async function decorate(block) {
 	                <p data-aue-prop="cfsubtitle" data-aue-label="SubTitle" data-aue-type="text" class='cfsubtitle'>${cfReq?.subtitle}</p>
 	                
 	                <p data-aue-prop="cfdescription" data-aue-label="Description" data-aue-type="richtext" class='cfdescription'>${cfReq?.description?.plaintext}</p>
-									<div class="button-group">
+									<div class="button-group">` + elements.join(""); +
+				 /*
 										<p class="button-container primary">
 					 						<strong><a href="${cfReq?.urlmain ? cfReq.urlmain : '#'}" contenteditable="true" title="${cfReq?.ctalabelmain}" class="button">${cfReq?.ctalabelmain}</a></strong>
 						 				</p>
 										<p class="button-container secondary">
 					 						<strong><a href="${cfReq?.urlsecondary ? cfReq.urlsecondary : '#'}" contenteditable="true" title="${cfReq?.ctalabelsecondary}" class="button">${cfReq?.ctalabelsecondary}</a></strong>
-						 				</p>
-									</div>
+						 				</p> */
+				
+									`</div>
 	            </div>
 							<div class='banner-logo'>
 								<img src="${imgUrl}" data-aue-prop="image" data-aue-label="Image" data-aue-type="media">
